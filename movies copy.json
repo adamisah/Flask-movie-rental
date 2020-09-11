@@ -1,0 +1,21 @@
+[
+    {
+        "title" : "Strange Love",
+        "year" : 2009,
+        "budget" : "USD 500m",
+        "cast" : "Selina Gomez, Micheal Scoflied"        
+    },
+    {
+        "title" : "In the name of love",
+        "year" : 2007,
+        "budget" : "USD 600m",
+        "cast" : "Mariam Sulemani, Yussif A Rahman"        
+    },
+    {
+        "title" : "Ocean's 8",
+        "year" : 2014,
+        "budget" : "USD 750m",
+        "cast" : "Osman Ramla, Rose Mensah"        
+    }
+    
+]

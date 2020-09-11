@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Isah Movie Rental</h1>
+<hr />
+<div>
+    <span>Actions</span>
+    &verbar;
+    <form action="/new-movie" class="d-inline" method="GET">
+        <input type="submit" class="btn btn-success btn-sm" value="new movie" />
+    </form>
+    <form action="/search" class="d-inline" method="post">
+        <input 
+        type="text" 
+        placeholder="search a movie by title" 
+        name="q" 
+        id=""
+        />
+    </form>
+
+    <form action="/search" class="d-inline form-inline" method="post">
+        <input type="text" name="q" id="" />
+    </form>
+</div>
+
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <th>#</th>
+        <th>title</th>
+        <th>release year</th>
+        <th>budget</th>
+        <th>cast</th>
+    </thead>
+    <tbody>
+      {% for m in movies %}
+      <tr>
+
+        <td>{{loop.index}}</td>
+        <td>{{m.title}}</td>
+        <td>{{m.year}}</td>
+        <td>{{m.budget}}</td>
+        <td>{{m.cast}}</td>
+          <a href="/edit/ {{m.title}}">
+             Edit
+        </a>
+        <a href="/delete/{{m.id}}" class="text-danger">
+            <span class="fa fa-trash"></span>
+            delete
+        </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>  
+
+
+{% endblock %}
